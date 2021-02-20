@@ -9,12 +9,12 @@ import PopUp from "../popup"
 import "./layout.scss"
 
 const Layout = ({ children, pageContext }) => {
-  const { slug, contentType } = pageContext
+  //const { isFrontPage, slug, contentType } = pageContext
 
   return (
     <>
       <SEO seoData={pageContext.seo} />
-      <Header isFrontPage={pageContext.isFrontPage} slug={slug} contentType={contentType} />
+      <Header isFrontPage={pageContext.isFrontPage} slug={pageContext.slug} contentType={pageContext.contentType} />
       <main>{children}</main>
       <Footer />
       <PopUp />
