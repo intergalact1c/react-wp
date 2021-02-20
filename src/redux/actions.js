@@ -7,8 +7,13 @@ export const fetchCases = (
 ) => dispatch => {
   dispatch(changePage())
   axios
-    .get(
+    /*.get(
       `http://react-wp.local/wp-json/wp/v2/case?${
+        tag && "&tags=" + tag
+      }&per_page=${perPage}&page=${nextPage}`
+    )*/
+    .get(
+      `http://cr14494-wordpress.tw1.ru/wp-json/wp/v2/case?${
         tag && "&tags=" + tag
       }&per_page=${perPage}&page=${nextPage}`
     )
@@ -54,8 +59,11 @@ export const fetchLastCases = (
   caseId,
 ) => dispatch => {
   axios
-    .get(
+    /*.get(
       `http://react-wp.local/wp-json/wp/v2/case?&per_page=2&exclude=${caseId}`
+    )*/
+    .get(
+      `http://cr14494-wordpress.tw1.ru/wp-json/wp/v2/case?&per_page=2&exclude=${caseId}`
     )
     .then(({ data }) => {
       dispatch(setLatestCases(data))
