@@ -19,7 +19,7 @@ export const useRelative = url => {
   if (!url) return undefined
 
   let WPURL = WPURLData()
-  WPURL = WPURL.slice(0, -3)
+  //WPURL = WPURL.slice(0, -3)
 
   let string = url
 
