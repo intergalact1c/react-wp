@@ -13,7 +13,7 @@ export const fetchCases = (
       }&per_page=${perPage}&page=${nextPage}`
     )*/
     .get(
-      `http://cr14494-wordpress.tw1.ru/wp-json/wp/v2/case?${
+      `http://react-wp.ru/wp-json/wp/v2/case?${
         tag && "&tags=" + tag
       }&per_page=${perPage}&page=${nextPage}`
     )
@@ -63,7 +63,7 @@ export const fetchLastCases = (
       `http://react-wp.local/wp-json/wp/v2/case?&per_page=2&exclude=${caseId}`
     )*/
     .get(
-      `http://cr14494-wordpress.tw1.ru/wp-json/wp/v2/case?&per_page=2&exclude=${caseId}`
+      `http://react-wp.ru/wp-json/wp/v2/case?&per_page=2&exclude=${caseId}`
     )
     .then(({ data }) => {
       dispatch(setLatestCases(data))
