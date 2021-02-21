@@ -37,7 +37,7 @@ module.exports = {
         fieldName: "wordpress",
         // Url to query from
         //url: "http://react-wp.local/wp/graphql",
-        url: "http://cr14494-wordpress.tw1.ru/graphql",
+        url: "http://react-wp.ru/graphql",
 
         // refetch interval in seconds
         //refetchInterval: 60,
